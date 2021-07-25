@@ -1,0 +1,186 @@
+.product {
+    padding: 0 40px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    @include breakpoint($bp-700) {
+        flex-direction: column;
+        padding: 0 20px;
+    }
+    &-img {
+        max-width: 700px;
+        display: flex;
+        justify-content: space-between;
+        margin-right: 40px;
+        @include breakpoint($bp-920) {
+            flex-direction: column;
+        }
+        @include breakpoint($bp-576) {
+            margin-right: 0;
+            margin-bottom: 40px;
+        }
+        img {
+            width: 100%;
+            height: auto;
+        }
+        &__main {
+            margin-right: 20px;
+            @include breakpoint($bp-360) {
+                margin-right: 0;
+            }
+        }
+        &-block {
+            margin-bottom: 20px;
+            &:last-child {
+                margin-bottom: 0;
+            }
+            @include breakpoint($bp-920) {
+                margin-top: 20px;
+                margin-right: 20px;
+            }
+            @include breakpoint($bp-576) {
+                margin-bottom: 0;
+            }
+            @include breakpoint($bp-360) {
+                &:last-child {
+                    margin-right: 0;
+                }
+            }
+        }
+        &__secondary {
+            @include breakpoint($bp-920) {
+                display: flex;
+                margin-right: 20px;
+            }
+            @include breakpoint($bp-576) {
+                margin-right: 0;
+                justify-content: space-between;
+            }
+        }
+    }
+    &-info {
+        max-width: 260px;
+        @include breakpoint($bp-576) {
+            max-width: 320px;
+        }
+        &__title {
+            font-size: 20px;
+            line-height: 26px;
+            text-transform: uppercase;
+            margin-bottom: 42px;
+            @include breakpoint($bp-576) {
+                display: none;
+            }
+            &--block {
+                display: none;
+                @include breakpoint($bp-576) {
+                    display: block;
+                    padding: 0 20px;
+                    margin-bottom: 20px;
+                }
+            }
+        }
+        &-block {
+            margin-bottom: 62px;
+        }
+        &__block {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 20px;
+            @include breakpoint($bp-576) {
+                flex-direction: column;
+            }
+            &-var {
+                display: flex; 
+                justify-content: space-between;
+            }
+            &-title {
+                text-transform: uppercase;
+                font-size: 16px;
+                line-height: 20px;
+                @include breakpoint($bp-576) {
+                    margin-bottom: 15px;
+                }
+            }
+        }
+        &-price {
+            text-align: right;
+            font-size: 30px;
+            line-height: 40px;
+            text-transform: uppercase;
+            margin-bottom: 14px;
+        }
+        &-btn {
+            display: flex;
+            flex-direction: column;
+            .btn {
+                margin-bottom: 12px;
+            }
+            @include breakpoint($bp-700) {
+                margin-bottom: 40px;
+            }
+        }
+    }
+}
+.size-var {
+    margin-right: 20px;
+    &:last-child {
+        margin-right: 0;
+    }
+}
+.color-var {
+    display: block;
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    margin-right: 16px;
+    cursor: pointer;
+    &:last-child {
+        margin-right: 40px;
+    }
+    @include breakpoint($bp-576) {
+        width: 25px;
+        height: 25px;
+    }
+}
+
+.white-bg {
+    background: #fff;
+}
+.brown-bg {
+    background: #C7B195 ;
+}
+.gray-bg {
+    background: #464646 ;
+}
+.lot-info {
+    font-size: 16px;
+    line-height: 20px;
+    margin: 0 13px;
+    @include breakpoint($bp-576) {
+        font-size: 24px;
+        line-height: 20px;
+    }
+}
+.lot-var {
+    cursor: pointer;
+    font-size: 16px;
+    line-height: 20px;
+    @include breakpoint($bp-576) {
+        font-size: 24px;
+        line-height: 20px;
+    }
+}
+.size-var {
+    font-size: 17px;
+    line-height: 20px;
+    color: #777777;
+    cursor: pointer;
+    &:hover {
+        color: #fff;
+    }
+    @include breakpoint($bp-576) {
+        font-size: 24px;
+        line-height: 20px;
+    }
+}

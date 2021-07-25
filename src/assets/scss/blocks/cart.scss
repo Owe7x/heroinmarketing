@@ -1,0 +1,165 @@
+.cart {
+    padding: 0 40px;
+    position: relative;
+    z-index: 1;
+    display: flex;
+    justify-content: space-between;
+    @include breakpoint($bp-920) {
+        flex-direction: column;
+    }
+    @include breakpoint($bp-700) {
+        padding: 0 20px;
+    }
+    @include breakpoint($bp-576) {
+        margin-top: 32px;
+    }
+    &::after {
+        display: block;
+        content: '';
+        width: 632px;
+        height: 336px;
+        position: absolute;
+        top: 100%;
+        right: 0;
+        background: url(../images/bg-3.png);
+        z-index: -1;
+        @include breakpoint($bp-920) {
+            top: 50%;
+        }
+        @include breakpoint($bp-768) {
+            top: 70%;
+        }
+    }
+    &-item {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 660px;
+        &--mobile {
+            display: flex;
+            justify-content: space-between;
+        }
+        &__block {
+            max-width: 250px;
+            @include breakpoint($bp-576) {
+                margin-bottom: 40px;
+                max-width: 320px;
+            }
+        }
+        &__img {
+            margin-bottom: 24px;
+            img {
+                @include breakpoint($bp-576) {
+                    width: 320px;
+                    height: auto;
+                }
+                @include breakpoint($bp-425) {
+                    width: 100%;
+                }
+            }
+        }
+        &__title {
+            font-size: 20px;
+            line-height: 26px;
+            text-transform: uppercase;
+            margin-bottom: 20px;
+            @include breakpoint($bp-576) {
+                display: none;
+            }
+            &--mobile {
+                display: none;
+                @include breakpoint($bp-576) {
+                    display: block;
+                }
+            }
+        }
+        @include breakpoint($bp-1140) {
+            width: 560px;
+        }
+        @include breakpoint($bp-920) {
+            width: 100%;
+            margin-bottom: 40px;
+        }
+        @include breakpoint($bp-576) {
+            flex-direction: column;
+        }
+
+    }
+    &-parm {
+        display: flex;
+        justify-content: space-between;
+        @include breakpoint($bp-576) {
+            justify-content: unset;
+            align-items: center;
+        }
+    }
+    &-price {
+        font-weight: 300;
+        font-size: 14px;
+        line-height: 19px;
+        @include breakpoint($bp-576) {
+            display: none;
+        }
+        &--mobile {
+            display: none;
+            @include breakpoint($bp-576) {
+                display: block;
+                font-size: 20px;
+                line-height: 26px;
+            }
+        }
+    }
+    &-val {
+        margin-right: 10px;
+    }
+    &-finish {
+        &-block {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 24px;
+        }
+        &-finish {
+            font-size: 14px;
+            line-height: 40px;
+            text-transform: uppercase;
+        }
+        &-price {
+            font-size: 30px;
+            line-height: 40px;
+            text-transform: uppercase;
+        }
+        &-promo {
+            margin-bottom: 24px;
+            color: #fff;
+            input {
+                width: 100%;
+                background: transparent;
+                border: none;
+                border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+                font-size: 14px;
+                line-height: 26px;
+                font-family: 'Muller';
+                color: #fff;
+            }
+        }
+    }
+    &-and {
+        @include breakpoint($bp-576) {
+            display: none;
+        }
+    }
+}
+.cart-size-var {
+    font-size: 17px;
+    line-height: 19px;
+    @include breakpoint($bp-576) {
+        font-size: 24px;
+        line-height: 20px;
+        margin-right: 25px;
+    }
+}
+.cart-val {
+    @include breakpoint($bp-576) {
+        margin-right: 27px;
+    }
+}

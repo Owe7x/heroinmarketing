@@ -1,0 +1,158 @@
+.header-main {
+    display: flex;
+    margin-top: 70px;
+    padding: 0 40px 130px;
+    position: relative;
+    
+    @include breakpoint($bp-920) {
+        padding: 0 20px 130px;
+    }
+    @include breakpoint($bp-700) {
+        padding: 0 0 60px 20px;
+        flex-direction: column;
+    }
+    &__text {
+        width: 250px;
+        font-weight: 300;
+        font-size: 12px;
+        margin-top: auto;
+        @include breakpoint($bp-700) {
+            display: none;
+        }
+        &--mobile {
+            display: none;
+            @include breakpoint($bp-700) {
+                display: block;
+            }
+        }
+    }
+    &__main {
+        margin-left: 90px;
+        position: relative;
+        @include breakpoint($bp-920) {
+            margin-left: 50px;
+            padding-right: 30px;
+            padding-bottom: 20px;
+        }
+        @include breakpoint($bp-700) {
+            padding-right: 0;
+            padding-left: 0px;
+            padding-top: 120px;
+        }
+        @include breakpoint($bp-360) {
+            margin-left: 36px;
+            padding-top: 150px;
+        }
+        &::after {
+            display: block;
+            content: '';
+            width: 974px;
+            height: 840px;
+            background: url(../images/bg-radial.png);
+            position: absolute;
+            top: -250px;
+            left: -160px;
+            transform: rotate(68.08deg);
+            animation: radialscroll 15s infinite linear;
+            @include breakpoint($bp-920) {
+                display: none;
+            }
+        }
+    }
+    &__h1 {
+        width: 250px;
+        font-weight: 500;
+        font-size: 40px;
+        line-height: 50px;
+        position: absolute;
+        top: 26px;
+        left: -139px;
+        z-index: 2;
+        @include breakpoint($bp-920) {
+           top: -40px;
+        }
+        @include breakpoint($bp-768) {
+            top: -60px;
+            left: -90px;
+        }
+        @include breakpoint($bp-700) {
+            left: -5px;
+        }
+        @include breakpoint($bp-360) {
+            left: -30px;
+            top: -30px;
+        }
+    }
+    &__img {
+        position: relative;
+        z-index: 1;
+        max-width: 650px;
+        img {
+                width: 100%;
+                height: auto;
+                @include breakpoint($bp-360) {
+                    max-width: 360px;
+                    height: 189px;
+                }
+        }
+    }
+    &__dots {
+        position: absolute;
+        bottom: -57px;
+        left: -41px;
+        @include breakpoint($bp-700) {
+            left: -70px;
+        }
+    }
+    &__ss {
+        margin-top: auto;
+        margin-left: auto;
+        transform: rotate(90deg);
+        padding-bottom: 20px;
+        position: relative;
+        bottom: -70px;
+        width: 56px;
+        height: 22px;
+        &::after {
+            display: block;
+            content: '';
+            height: 1px;
+            width: 80px;
+            background: #fff;
+            position: absolute;
+            top: 8px;
+            right: 140%;
+        }
+        @include breakpoint($bp-1140) {
+            position: absolute;
+            bottom: 70px;
+            right: 10px;
+        }
+        @include breakpoint($bp-700) {
+            display: none;
+        }
+        &--mobile {
+            display: none;
+            @include breakpoint($bp-700) {
+                display: block;
+                position: unset;
+            }
+        }
+    }
+    &--mobile {
+        display: none;
+        @include breakpoint($bp-700) {
+            display: block;
+            margin-top: 150px;
+        }
+    }
+}
+.removepos {
+    z-index: -1;
+}
+.addpos {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}

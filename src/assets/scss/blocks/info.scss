@@ -1,0 +1,61 @@
+.info {
+    padding: 0 40px;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 60px;
+    @include breakpoint($bp-920) {
+        padding: 0 20px;
+    }
+    @include breakpoint($bp-768) {
+        flex-direction: column;
+    }
+    &-blocks {
+        display: flex;
+        justify-content: space-between;
+        @include breakpoint($bp-768) {
+            flex-direction: column;
+        }
+        &--card {
+            margin-bottom: 40px;
+            @include breakpoint($bp-920) {
+                flex-direction: column;
+                margin-bottom: 0;
+            }
+
+        }
+    }
+    &-block { 
+        margin-right: 40px;
+        
+        @include breakpoint($bp-920) {
+            margin-bottom: 40px;
+        }
+    }
+    &-title {
+        font-size: 40px;
+        line-height: 48px;
+        font-weight: 400;
+        text-transform: uppercase;
+    }
+    &-ul {
+        padding-left: 15px;
+    }
+    &-li {
+        list-style: disc;
+    }
+    &--card {
+        flex-direction: column;
+        justify-content: unset;
+        padding: 0;
+        @include breakpoint($bp-576) {
+            order: 2;
+            margin-top: 90px;
+            margin-bottom: 50px;
+        }
+        @include breakpoint($bp-360) {
+            order: 2;
+            margin-top: 150px;
+            margin-bottom: 50px;
+        }
+    }
+}

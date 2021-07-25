@@ -1,0 +1,39 @@
+.info-product {
+    padding: 0 40px;
+    margin-top: 40px;
+    position: relative;
+    margin-bottom: 120px;
+    @include breakpoint($bp-700) {
+        display: none;
+    }
+    &--block {
+        display: none;
+        @include breakpoint($bp-700) {
+            display: block;
+            padding: 0;
+            margin-bottom: 40px;
+        }
+    }
+    &-title {
+        font-size: 20px;
+        line-height: 20px;
+        margin-bottom: 12px;
+    }
+    &-p {
+        max-width: 520px;
+        font-weight: 300;
+        font-size: 14px;
+        line-height: 18px;
+    }
+    &::after {
+        display: block;
+        content: '';
+        background: url(../images/bg-3.png);
+        width: 632px;
+        height: 336px;
+        position: absolute;
+        top: -50px;
+        left: 0;
+        z-index: -1;
+    }
+}

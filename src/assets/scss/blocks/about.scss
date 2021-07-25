@@ -1,0 +1,96 @@
+.about {
+    padding: 115px 40px 125px;
+    display: flex;
+    justify-content: space-between;
+    background: url(../images/bg.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    @include breakpoint($bp-920) {
+        padding: 115px 20px 125px;
+    }
+    @include breakpoint($bp-768) {
+        flex-direction: column;
+        background-position: bottom right;
+        background-size: unset;
+    }
+    
+    &-block {
+        @include breakpoint($bp-768) {
+            margin-bottom: 100px;
+            &:last-child {
+                margin-bottom: 0;
+            }
+        }
+    }
+    &-subtitle {
+        font-weight: 300;
+        font-size: 20px;
+        margin-bottom: 13px;
+        line-height: 19px;
+    }
+    &-title {
+        font-size: 40px;
+        line-height: 48px;
+        font-weight: 400;
+        margin-bottom: 24px;
+        @include breakpoint($bp-576) {
+            font-size: 30px;
+            line-height: 30px;
+        }
+        @include breakpoint($bp-360) {
+            font-size: 27px;
+        }
+    }
+    &-p {
+        font-weight: 300;
+        font-size: 16px;
+        line-height: 19px;
+        max-width: 420px;
+        margin-bottom: 51px;
+    }
+    &-info {
+        display: flex;
+        justify-content: space-between;
+        @include breakpoint($bp-576) {
+            flex-wrap: wrap;
+        }
+        &-block {
+            @include breakpoint($bp-576) {
+                width: 50%;
+                margin-bottom: 30px;
+                &:last-child {
+                    margin-bottom: 0;
+                }
+            }
+        }
+        &__number {
+            font-weight: 400;
+            font-size: 30px;
+            line-height: 48px;
+            text-transform: uppercase;
+        }
+        &__subtitle {
+            font-weight: 300;
+            font-size: 14px;
+            line-height: 18px;
+            color: #fff;
+            text-transform: uppercase;
+        }
+    }
+    &-subtitle-2 {
+        font-weight: 300;
+        font-size: 35px;
+        line-height: 42px;
+        text-transform: uppercase;
+        text-align: right;
+        max-width: 424px;
+        @include breakpoint($bp-768) {
+            margin-left: auto;
+        }
+    }
+    &-img {
+        display: flex;
+        justify-content: flex-end;
+        margin-bottom: 96px;
+    }
+}

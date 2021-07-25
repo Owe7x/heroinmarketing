@@ -1,0 +1,31 @@
+.footer {
+    display: flex;
+    justify-content: space-between;
+    padding: 80px 40px 40px;
+    &-text {
+        text-align: center;
+        font-weight: 300;
+        font-size: 12px;
+        @include breakpoint($bp-700) {
+            text-align: left;
+            margin-bottom: 50px;
+            margin-top: 50px;
+        }
+    }
+    &-info {
+        display: flex;
+        flex-direction: column;
+        a {
+            text-decoration: none;
+            color: #fff;
+            font-weight: 300;
+            font-size: 12px;
+        }
+    }
+    @include breakpoint($bp-700) {
+        flex-direction: column;
+    }
+    &-bottom {
+        flex: 0 0 auto;
+    }
+}
